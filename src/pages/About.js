@@ -3,7 +3,7 @@ import classes from './About.module.css';
 const About = () => {
   return (
     <div className={classes.main}>
-      <video className={classes.video} src={Road1} autoPlay loop muted></video>
+      <video className={classes.video} src={Road1} autoPlay muted></video>
 
       <section className={classes.textSection}>
         <h1>Racing Is In Our Blood</h1>
