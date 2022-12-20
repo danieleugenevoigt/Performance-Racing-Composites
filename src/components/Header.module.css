@@ -3,9 +3,8 @@
     padding: 0px;
     margin: 0px;
 }
-
 .image {
-    background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.g9H2HP8Hac9DM4CorgmzyQHaHa%26pid%3DApi&f=1&ipt=b264c40d87184cc2a20606e994292bd4d1824a058f7914461172a02c908894f8&ipo=images');
+    background-image: url('https://c2.staticflickr.com/8/7034/6553628169_7b2fdf6995_b.jpg');
     background-repeat: no-repeat ;
     background-position: center;
     background-size: cover;
@@ -27,7 +26,7 @@ ul {
 
 li {
     list-style: none;
-    padding-top: 1rem;
+    padding-top: .5rem;
     padding-bottom:.5rem;
     padding-left: 2rem;
     padding-right: 2rem;

@@ -1,0 +1,13 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+img {
+    width: 175px;
+    
+    padding: 2px;
+    object-fit: cover;
+    
+}

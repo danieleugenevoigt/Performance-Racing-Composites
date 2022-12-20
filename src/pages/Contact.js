@@ -1,6 +1,6 @@
 import React from 'react'
 import ContactForm from '../components/ContactForm';
-import classes from './Contact.module.css'
+import classes from './Contact.module.css';
 
 import { useState } from 'react';
 
