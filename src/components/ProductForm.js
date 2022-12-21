@@ -1,0 +1,116 @@
+import classes from './ProductForm.module.css';
+import { useState, useRef } from 'react';
+import { Navigate, useNavigate } from 'react-router-dom';
+
+const ProductForm = (props) => {
+  const navigate = useNavigate();
+  const urlInputRef = useRef();
+  const ratingInputRef = useRef();
+  const descriptionInputRef = useRef();
+  const skuInputRef = useRef();
+  const quantityInputRef = useRef();
+  const priceInputRef = useRef();
+  
+  const [inputs, setInputs] = useState({});   
+    
+function handleSubmit(event) {
+  event.preventDefault();
+  console.log('handle submit called');
+  const enteredUrl = urlInputRef.current.value;
+  const enteredRating= ratingInputRef.current.value;
+  const enteredDescription = descriptionInputRef.current.value;
+  const enteredSku = skuInputRef.current.value;
+  const enteredQuantity = quantityInputRef.current.value;
+  const enteredPrice = priceInputRef.current.value;
+  
+
+
+  const productData = {
+    URL: enteredUrl,
+    RATING: enteredRating,
+    DESCRIPTION: enteredDescription,
+    SKU: enteredSku,
+    QUANTITY: enteredQuantity,
+    PRICE: enteredPrice,
+  };
+
+  fetch(
+  "https://performance-racing-composites-default-rtdb.firebaseio.com/productdata.json",
+    { 
+    method: "POST",
+    body: JSON.stringify(productData),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  }).then(()=>{
+    navigate('/home',{replace:true});
+  });
+
+  console.log('function ran');
+  
+}
+
+
+
+  return (
+    <div>
+      <form className={props.isShow2 ? classes.hide : ""} onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor='image url'>Image Url </label>
+          <input
+            type='text'
+            required id='url'
+            ref={urlInputRef}
+          />
+        </div>
+        <div>
+          <label htmlFor='rating'>Rating</label>
+          <input
+            type='number'
+            required id='rating'
+            ref={ratingInputRef}
+          />
+        </div>
+        <div>
+          <label htmlFor='description' placeholder='text'>
+            Description{" "}
+          </label>{" "}
+          <input
+            type='text'
+            required id='description'
+            ref={descriptionInputRef}
+          />
+        </div>
+        <label htmlFor='sku' placeholder='12345'>
+          SKU{" "}
+        </label>{" "}
+        <input
+          type='number'
+          required id='sku'
+          ref={skuInputRef}
+        />
+        <label htmlFor='quantity' placeholder='99'>
+          Quantity{" "}
+        </label>{" "}
+        <input
+          type='number'
+          required id='quantity'
+          ref={quantityInputRef}
+        />
+        <div>
+          <label htmlFor='price'>Price </label>
+          <input
+            type='float'
+            id='price'
+            ref={priceInputRef}
+          />
+        </div>
+        <div>
+          <input type='submit' />
+        </div>
+      </form>
+    </div>
+  );
+}
+
+export default ProductForm
