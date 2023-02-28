@@ -7,6 +7,8 @@ import CustomShop from './pages/CustomShop'
 import Home from './pages/Home';
 import News from './pages/News';
 import Products from './pages/Products';
+import ProductPage from './pages/ProductPage';
+import Login from './pages/Login';
 
 function App() {
   return (
@@ -19,6 +21,9 @@ function App() {
         <Route path="/custom-shop" element={<CustomShop />}></Route>
         <Route path="/news" element={<News />}></Route>
         <Route path="/products" element={<Products />}></Route>
+        <Route path="/product-page" element={<ProductPage />}></Route>
+        <Route path="/login" element={<Login />}></Route>
+        
       </Routes>
     </div>
   );

@@ -3,17 +3,19 @@
     margin: 0px;
     padding: 0px;
     font-family: Poppins;
+    font-weight: 500;
 }
 
 
 
 .container {
     width: 200px;
-    height: 300px;
+    height: 400px;
     display: grid;
     grid-template-columns: minmax(0, 100px);
     grid-template-rows: minmax(0, 25px);
-    grid-template-areas: 'image image'
+    grid-template-areas:
+          'image image'
           'image image'
           'image image'
           'image image'
@@ -27,39 +29,64 @@
                       
     border-radius: 10px;
     box-shadow: 0 0 20px black;
-    background-color:  gray;
-   
+    background-color:  rgb(54, 53, 53);
+    margin: 15px;
+    
+}
 
-    margin: 20px;
+img {
+    width: 175px;
+    max-height: 120px;
 }
 
 .image {
     grid-area: image;
-    
-
-    
+    padding-left: 10px ;
+    padding-right: 10px;
+    padding-top: 10px;
 }
 
-.fa .fa-star{
-    margin-left: 5px;
+
+.ratingContainer {
     grid-area: rating;
 }
 
-i  {
-    color: yellow;
-    grid-area: rating;
-    font-size: .5rem;
-   
+.starsOuter {
+    display: inline-block;
+    position: relative;
+    font-family: FontAwesome;
 }
 
+.starsOuter::before {
+    content: "\f006 \f006 \f006 \f006 \f006";
+    color: black;
+} 
+
+.starsInner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: FontAwesome;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0%;
+}
+
+.starsInner::before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    color: #f8ce0b;
+}
 
 .title {
+    color: antiquewhite;
     grid-area: title;
     font-size: .6rem;
+    font-weight: 500;
     padding-top:5px;
 }
 
 .sku {
+    color: antiquewhite;
     grid-area: sku;
     font-size: .4rem;
     text-align: left;
@@ -68,6 +95,7 @@ i  {
 }
 
 .stock {
+    color: antiquewhite;
     grid-area: stock;
     font-size: .4rem;
     text-align: right;
@@ -85,6 +113,16 @@ i  {
     grid-area: button;
     max-width: 175px;
     grid-area: button;
-    padding-bottom: 0px;
+    margin-left: 12.5px;
     text-align: center;
+}
+
+.container:hover{
+    box-shadow: 0px 0px 20px white;
+}
+
+
+ a:link {
+    color: none;
+    text-decoration: none;
 }

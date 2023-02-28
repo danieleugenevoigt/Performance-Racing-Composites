@@ -1,13 +1,33 @@
 * {
+    font-family: Poppins;
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
 }
 
-img {
-    width: 175px;
-    
-    padding: 2px;
-    object-fit: cover;
-    
+.productLayout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.selectorForm {
+  margin-top: 30px; 
+  margin-bottom: 30px; 
+  box-shadow: 0 0 20px black;
+  background-color:  rgb(54, 53, 53);
+  font-weight: 500;
+}
+
+.selectorLabel {
+    background: none;
+    margin-right: 30px;
+}
+
+.selectorInput {
+    color: black;
+    background: orange;
+    padding: 2px 15px 2px 15px;
+    margin-left: 10px;
+    border-radius: 5px;
 }

@@ -10,7 +10,8 @@ const ProductForm = (props) => {
   const skuInputRef = useRef();
   const quantityInputRef = useRef();
   const priceInputRef = useRef();
-  
+  const categoryInputRef = useRef();
+
   const [inputs, setInputs] = useState({});   
     
 function handleSubmit(event) {
@@ -22,7 +23,7 @@ function handleSubmit(event) {
   const enteredSku = skuInputRef.current.value;
   const enteredQuantity = quantityInputRef.current.value;
   const enteredPrice = priceInputRef.current.value;
-  
+  const enteredCategory = categoryInputRef.current.value;
 
 
   const productData = {
@@ -32,6 +33,7 @@ function handleSubmit(event) {
     SKU: enteredSku,
     QUANTITY: enteredQuantity,
     PRICE: enteredPrice,
+    CATEGORY: enteredCategory,
   };
 
   fetch(
@@ -46,10 +48,12 @@ function handleSubmit(event) {
     navigate('/home',{replace:true});
   });
 
-  console.log('function ran');
+  console.log('posting data to database');
   
 }
 
+
+    
 
 
   return (
@@ -66,7 +70,7 @@ function handleSubmit(event) {
         <div>
           <label htmlFor='rating'>Rating</label>
           <input
-            type='number'
+            type='float'
             required id='rating'
             ref={ratingInputRef}
           />
@@ -104,6 +108,16 @@ function handleSubmit(event) {
             id='price'
             ref={priceInputRef}
           />
+        </div>
+        <div>
+          <label htmlFor="catagory">Choose a product category:</label>
+          <select name="category" id="category" ref={categoryInputRef}>
+            <option value="Body">Body</option>
+            <option value="Engine">Engine</option>
+            <option value="Interior">Interior</option>
+            <option value="Spoilers">Spoilers</option>
+            <option value="Other">Other</option>
+          </select>
         </div>
         <div>
           <input type='submit' />

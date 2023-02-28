@@ -1,22 +1,59 @@
-import classes from './Product.module.css'
+import { Ref, useRef } from 'react';
+import classes from './Product.module.css';
+import {Link} from "react-router-dom";
 
-const Product = (props) => {
-  
-  return (
-    <div className={classes.main}>
-      <div className={classes.container}> 
-        <div className={classes.image}>{props.productImage}</div>
-        <i className='fa fa-star 'aria-hidden="true"></i> 
-        <p className={classes.title}>{props.productTitle}</p>
-        <h4 className={classes.sku}> {props.sku}</h4>
-        <h4 className={classes.stock}>{props.stock}</h4>
-        <h2 className={classes.price}>{props.price}</h2>
-        <button className={classes.btn}>Add</button>
-      </div>
+function Product(props)  {
+  const productRef = useRef();
+
+  function NormalizeRating() {
+    if (stars > 100 || stars < 10){
+       stars = 0;
+    }else {
+      stars = stars;
+    }
+
+    return stars;
+  }
+      const starTotal = 5;
+      let stars = props.RATING / starTotal * 100;
+      {stars = NormalizeRating()};
       
+     
+     
+        
 
-    </div>
-  )
-}
+          
+
+          return (
+            <Link to="/product-page">
+            <li  ref={productRef}>
+              <div className={classes.container}>
+                <div className={classes.image}>
+                  <img src={props.URL} alt={props.DESCRIPTION} />
+                </div>
+
+                <span className={classes.ratingContainer}>
+                  <div className={classes.starsOuter}>
+                    <div
+                      className={classes.starsInner}
+                      style={{ width: stars + "%" }}
+                    ></div>
+                  </div>
+                </span>
+
+                <div className={classes.sku}>SKU {props.SKU}</div>
+                <div className={classes.stock}>QTY {props.QUANTITY}</div>
+                <div className={classes.title}>{props.DESCRIPTION}</div>
+                <div className={classes.price}>{props.PRICE}</div>
+                <button className={classes.btn}>Add To Cart</button>
+              </div>
+            </li>
+            </Link>
+          );
+  }
+    
+  
+  
+
 
 export default Product
