@@ -30,7 +30,7 @@ const Contact = () => {
       <h1>Contact Us</h1>
       <p>
         We are here to help get your project out of the garage and back on the
-        track. Reach out to one of our sales or support representitives for
+        race track. Reach out to one of our sales or support representitives for
         prompt service.
       </p>
       <button id={1} onClick={toggle}>Contact Us!</button> 
