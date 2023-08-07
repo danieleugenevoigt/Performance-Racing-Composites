@@ -5,11 +5,11 @@
 }
 
 .productLayout {
-    max-width: 1400px;
+    max-width: 90vw;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: left;
+    justify-content: center;
     margin-left: 100px;
     margin-right: 100px;
 }
