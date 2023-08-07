@@ -9,11 +9,11 @@
 
 
 .container {
-    width: 200px;
-    height: 400px;
+    width: 300px;
+    height: 600px;
     display: grid;
-    grid-template-columns: minmax(0, 100px);
-    grid-template-rows: minmax(0, 25px);
+    grid-template-columns: minmax(0, 150px);
+    grid-template-rows: minmax(0, 30px);
     grid-template-areas:
           'image image'
           'image image'
@@ -35,8 +35,8 @@
 }
 
 img {
-    width: 175px;
-    max-height: 120px;
+    width: 275px;
+    max-height: 200px;
 }
 
 .image {
