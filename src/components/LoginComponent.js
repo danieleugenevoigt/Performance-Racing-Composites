@@ -14,7 +14,9 @@ const [user, setUser] = useState({});
     setUser(currentUser);
 })*/
 
-useEffect(()=>onAuthStateChanged(auth,(currentUser)=>{setUser(currentUser)}),[]);
+useEffect(
+  ()=>onAuthStateChanged(auth,(currentUser)=>{setUser(currentUser)})
+  ,[]);
 
 const register = async ()=>{
   try{

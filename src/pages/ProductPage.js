@@ -1,9 +1,9 @@
 import classes from './ProductPage.module.css';
 
-const ProductPage = (props) => {
+const ProductPage = () => {
   return (
     <div>
-      <p>This is a new product.</p>
+      <p>New Product</p>
     </div>
   )
 }

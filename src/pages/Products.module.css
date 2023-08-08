@@ -5,6 +5,14 @@
     padding: 0px;
 }
 
+select {
+    font-weight: 800;
+}
+
+option {
+    font-weight: 800;
+}
+
 .productLayout {
     display: flex;
     flex-direction: column;
@@ -12,11 +20,12 @@
 }
 
 .selectorForm {
+
   margin-top: 30px; 
   margin-bottom: 30px; 
   box-shadow: 0 0 20px black;
   background-color:  rgb(54, 53, 53);
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .selectorLabel {

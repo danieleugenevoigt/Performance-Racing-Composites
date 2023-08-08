@@ -1,4 +1,4 @@
-import { Ref, useRef } from 'react';
+import { useRef } from 'react';
 import classes from './Product.module.css';
 import {Link} from "react-router-dom";
 
@@ -11,19 +11,13 @@ function Product(props)  {
     }else {
       stars = stars;
     }
-
     return stars;
   }
+
       const starTotal = 5;
       let stars = props.RATING / starTotal * 100;
       {stars = NormalizeRating()};
       
-     
-     
-        
-
-          
-
           return (
             <Link to="/product-page">
             <li  ref={productRef}>
