@@ -1,0 +1,25 @@
+h1 {
+  font-size: 6rem;
+  font-weight: 600;
+  color: antiquewhite;
+  text-shadow: 2px 2px 5px orange;
+  
+  
+}
+
+p {
+  font-size: 2rem;
+}
+
+.promoContainer {
+  background-color: rgb(115, 191, 248);
+  border-radius: 15px;
+  color:antiquewhite;
+  height: 30vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 6rem;
+  text-shadow: 2px 2px 5px orange;
+  text-decoration: wavy;
+  width: 60vw;
+}
