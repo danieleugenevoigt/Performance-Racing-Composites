@@ -57,9 +57,9 @@ const Products = () => {
 
   return (
     <section className={classes.productLayout}>
-      <form className={classes.selectorForm} onSubmit={handleSelection}>
+      <form className={classes.selectorForm}>
         <label className={classes.selectorLabel} htmlFor='productSelector'>Filter Products By Type</label>
-        <select name='productSelector' id='productSelector' ref={selectedRef}>
+        <select name='productSelector' id='productSelector' ref={selectedRef} onChange={handleSelection}>
           <option value='All'>All</option>
           <option value='Body'>Body</option>
           <option value='Engine'>Engine</option>
@@ -67,7 +67,6 @@ const Products = () => {
           <option value='Spoilers'>Spoilers</option>
           <option value='Other'>Other</option>
         </select>
-        <input className={classes.selectorInput}type='submit' />
       </form>
 
       <ProductList items={loadedProducts} />
