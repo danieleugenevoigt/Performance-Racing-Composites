@@ -7,7 +7,7 @@
 
 .main {
     position: absolute;
-    top: 160px;
+    top: 130px;
     left: 0;
     width: 100%;
     height: 100vh;
@@ -20,13 +20,13 @@ video {
     height: 100vh;
     object-fit: cover;
     opacity: 35%;
-    
-    
 }
 
 p {
     color: antiquewhite;
+    font-size: 1rem;
     padding-top: 2.5rem;
+    text-align: left;
 }
 
 .overlay {
@@ -34,8 +34,9 @@ p {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0); /* Initial color */
+    background-image:linear-gradient(#4E4D4A, #303030);
     opacity: 0; /* Initial opacity */
     transition: background-color 4s, opacity 2s;
 }

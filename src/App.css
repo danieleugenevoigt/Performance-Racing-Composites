@@ -1,5 +1,12 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Poppins';
+}
+
 .App {
-  background-image:linear-gradient(#02050A, #4C4C4C ) ; 
+  background-image:linear-gradient(#4E4D4A, #02050A); 
   height: 300vh;
   text-align: center;
   z-index: 2;
