@@ -5,10 +5,11 @@ const About = () => {
 
     useEffect(() => {
         const video = document.getElementById('background-video');
-        const overlay = document.querySelector('.overlay');
+        const overlay = document.getElementById('overlay');
 
         const handleVideoEnd = () => {
-            overlay.style.backgroundColor = '#4E4D4A'; // Replace with your desired color
+            overlay.style.backgroundColor = '#4E4D4A';
+            console.log(overlay.style.backgroundColor);
             overlay.style.opacity = '1';
         };
 
@@ -22,7 +23,7 @@ const About = () => {
   return (
     <div className={classes.main}>
       <video id={"background-video"} className={classes.video} src={Road1} autoPlay muted></video>
-      <div className={classes.overlay}></div>
+      <div id={'overlay'} className={classes.overlay}></div>
 
       <section className={classes.textSection}>
         <h1>Racing Is In Our Blood</h1>
