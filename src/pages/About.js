@@ -27,22 +27,28 @@ const About = () => {
 
       <section className={classes.textSection}>
         <h1>Racing Is In Our Blood</h1>
-        <p>
-          Welcome to Performance Racing Composites – Your Destination for Cutting-Edge Carbon Fiber Innovations
-          With a legacy dating back to 1970, Performance Racing Composites stands as a pioneer in the custom car 
+        <p >Welcome to Performance Racing Composites – Your Destination for Cutting-Edge Carbon Fiber Innovations.</p>
+       
+        <p className={classes.indent}>With a legacy dating back to 1970, Performance Racing Composites stands as a pioneer in the custom car 
           parts industry. We are your ultimate source for top-tier carbon fiber body parts, spoilers, interiors, 
-          aftermarket exhausts, suspension systems, and brakes that redefine automotive performance and aesthetics.
-          Our journey began with a passion for pushing boundaries and revolutionizing the racing experience. Over 
+          aftermarket exhausts, suspension systems, and High performance brake systems that redefine automotive 
+          performance and aesthetics.
+        </p>
+        
+        <p className={classes.indent}>Our journey began with a passion for pushing boundaries and revolutionizing the racing experience. Over 
           the decades, we've harnessed this dedication to craft exceptional products that reflect our commitment to 
           excellence. From amateur to professional racing circuits, our storied history is interwoven with triumphs 
-          and breakthroughs that have left an indelible mark on the automotive world.At Performance Racing Composites, 
+          and breakthroughs that have left an indelible mark on the automotive world.  At Performance Racing Composites, 
           precision engineering is our hallmark. Our artisans meticulously mold carbon fiber into masterpieces that 
           embody strength, agility, and style. Each creation is a testament to our ceaseless pursuit of perfection, 
-          setting new benchmarks in speed, handling, and design.Join us in embracing the spirit of innovation and 
-          performance. Experience the culmination of decades of expertise and passion, as we continue to shape the 
-          future of automotive excellence, one carbon fiber component at a time. Discover the unparalleled world of 
-          Performance Racing Composites – where racing heritage meets cutting-edge technology.
-                  </p>
+          setting new benchmarks in speed, handling, and design.
+        </p>
+        
+        <p className={classes.indent}>Join us in embracing the spirit of innovation and performance. Experience the culmination of decades of 
+          expertise and passion, as we continue to shape the future of automotive excellence, one carbon fiber component
+          at a time. Discover the unparalleled world of Performance Racing Composites – where racing heritage meets 
+          cutting-edge technology.
+        </p>
       </section>
     </div>
   );
