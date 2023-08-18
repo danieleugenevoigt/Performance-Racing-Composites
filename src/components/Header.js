@@ -18,6 +18,25 @@ const Header = () => {
           />
          </Link>
         </li>
+        <li>
+          <div className={classes.shopByVehicle}>
+            <button>
+              <h2>
+                <span className={classes.carSymbol}>
+                  <span class="material-symbols-outlined">
+                    directions_car
+                  </span>
+                </span>
+                Shop By Vehicle
+                <span className={classes.expandSymbol}>
+                  <span class="material-symbols-outlined">
+                    expand_more
+                  </span>
+                </span>
+              </h2>
+            </button>
+          </div>
+        </li>
          <li>
          <Link className={classes.link}to='/products'>Products</Link>
          </li>
