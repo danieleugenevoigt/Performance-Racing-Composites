@@ -31,7 +31,7 @@ const About = () => {
        
         <p className={classes.indent}>With a legacy dating back to 1970, Performance Racing Composites stands as a pioneer in the custom car 
           parts industry. We are your ultimate source for top-tier carbon fiber body parts, spoilers, interiors, 
-          aftermarket exhausts, suspension systems, and High performance brake systems that redefine automotive 
+          aftermarket exhausts, suspension systems, and high performance brake systems that redefine automotive 
           performance and aesthetics.
         </p>
         
@@ -45,7 +45,7 @@ const About = () => {
         </p>
         
         <p className={classes.indent}>Join us in embracing the spirit of innovation and performance. Experience the culmination of decades of 
-          expertise and passion, as we continue to shape the future of automotive excellence, one carbon fiber component
+          expertise and passion as we continue to shape the future of automotive excellence, one carbon fiber component
           at a time. Discover the unparalleled world of Performance Racing Composites – where racing heritage meets 
           cutting-edge technology.
         </p>
