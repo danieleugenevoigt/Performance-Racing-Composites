@@ -1,0 +1,35 @@
+ * {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+img {
+    width:1
+}
+
+.modal h1 {
+    color: orange;
+    font-size: 7rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4rem;
+}
+
+.modal p {
+    color: antiquewhite;
+    font-size: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+}
+
+.container {
+    background-image:linear-gradient(#4E4D4A, #02050A); 
+    border: 1px solid orange;
+    border-radius: 5px;
+    display: inline-block;
+    height: auto;
+    margin-top: 4rem;
+    width: auto;
+} 

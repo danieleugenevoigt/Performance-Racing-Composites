@@ -4,6 +4,10 @@
     margin: 0px;
 }
 
+.headerBtn {
+    display: contents;
+} 
+
 h2 {
     padding-bottom: .5rem;
 }

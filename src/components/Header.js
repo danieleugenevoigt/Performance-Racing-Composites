@@ -19,8 +19,9 @@ const Header = () => {
          </Link>
         </li>
         <li>
+          <button className={classes.headerBtn}>
           <div className={classes.shopByVehicle}>
-            <button>
+            
               <h2>
                 <span className={classes.carSymbol}>
                   <span class="material-symbols-outlined">
@@ -34,8 +35,9 @@ const Header = () => {
                   </span>
                 </span>
               </h2>
-            </button>
+            
           </div>
+          </button> 
         </li>
          <li>
          <Link className={classes.link}to='/products'>Products</Link>
