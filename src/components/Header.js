@@ -1,9 +1,16 @@
+import { useState } from 'react';
 import classes from './Header.module.css';
 import { Link } from 'react-router-dom';
-
-
+import VehicleSelector from './VehicleSelector/VehicleSelector';
 
 const Header = () => {
+
+  const [ isElementHidden, setIsElementHidden ] = useState(false)
+  
+  const toggleSelector = () => {
+    setIsElementHidden(!isElementHidden);
+  }
+
   return (
     <div >
       <nav className={classes.image}>
@@ -19,18 +26,18 @@ const Header = () => {
          </Link>
         </li>
         <li>
-          <button className={classes.headerBtn}>
+          <button className={classes.headerBtn} onClick={toggleSelector}>
           <div className={classes.shopByVehicle}>
             
               <h2>
                 <span className={classes.carSymbol}>
-                  <span class="material-symbols-outlined">
+                  <span className="material-symbols-outlined">
                     directions_car
                   </span>
                 </span>
                 Shop By Vehicle
                 <span className={classes.expandSymbol}>
-                  <span class="material-symbols-outlined">
+                  <span className="material-symbols-outlined">
                     expand_more
                   </span>
                 </span>
@@ -59,6 +66,9 @@ const Header = () => {
          </li>
         </ul>
       </nav>
+      {isElementHidden &&
+      <VehicleSelector></VehicleSelector>
+      };
     </div>
   )
 }
