@@ -34,6 +34,7 @@
     align-self: right;
     grid-column: 3;
     grid-row: 1;
+    margin-top: 1.5rem;
 }
 
 .material-symbols-outlined {
