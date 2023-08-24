@@ -12,7 +12,7 @@ const Header = () => {
   }
 
   return (
-    <div >
+    <div>
       <nav className={classes.image}>
         <h1>Performance Racing Composites</h1>
         <ul>
@@ -68,7 +68,7 @@ const Header = () => {
       </nav>
       {isElementHidden &&
       <VehicleSelector></VehicleSelector>
-      };
+      }
     </div>
   )
 }

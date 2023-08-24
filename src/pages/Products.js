@@ -1,6 +1,6 @@
 import ProductList from "../components/ProductList";
 import classes from './Products.module.css';
-import { useState, useEffect, useRef, createContext, useContext} from "react";
+import { useState, useEffect, useRef } from "react";
 
 const Products = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -32,9 +32,6 @@ const Products = () => {
         setIsLoading(false);
         setLoadedProducts(currentProducts);
         
-
-        if (isLoading) {
-        }
       });
   }, []);
 

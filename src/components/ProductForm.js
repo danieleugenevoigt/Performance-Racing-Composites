@@ -1,6 +1,8 @@
 import classes from './ProductForm.module.css';
-import { useState, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
+import {auth} from '../components/firebaseConfig';
+
 
 const ProductForm = (props) => {
   const navigate = useNavigate();
@@ -12,29 +14,44 @@ const ProductForm = (props) => {
   const priceInputRef = useRef();
   const categoryInputRef = useRef();
 
-  const [inputs, setInputs] = useState({});   
-    
-function handleSubmit(event) {
-  event.preventDefault();
-  console.log('handle submit called');
-  const enteredUrl = urlInputRef.current.value;
-  const enteredRating= ratingInputRef.current.value;
-  const enteredDescription = descriptionInputRef.current.value;
-  const enteredSku = skuInputRef.current.value;
-  const enteredQuantity = quantityInputRef.current.value;
-  const enteredPrice = priceInputRef.current.value;
-  const enteredCategory = categoryInputRef.current.value;
+  const [authToken, setAuthToken] = useState({}); 
+   
+  
+  useEffect(() => {
+    const fetchAuthToken = async () => {
+      try {
+        const token = await auth.currentUser.uid;
+        setAuthToken(token);
+      } catch (error) {
+        // Handle error
+        console.error('Error fetching auth token:', error);
+      }
+    };
+
+    fetchAuthToken();
+  }, []);
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    console.log('authToken = ' + authToken);
+    const enteredUrl = urlInputRef.current.value;
+    const enteredRating= ratingInputRef.current.value;
+    const enteredDescription = descriptionInputRef.current.value;
+    const enteredSku = skuInputRef.current.value;
+    const enteredQuantity = quantityInputRef.current.value;
+    const enteredPrice = priceInputRef.current.value;
+    const enteredCategory = categoryInputRef.current.value;
 
 
-  const productData = {
-    URL: enteredUrl,
-    RATING: enteredRating,
-    DESCRIPTION: enteredDescription,
-    SKU: enteredSku,
-    QUANTITY: enteredQuantity,
-    PRICE: enteredPrice,
-    CATEGORY: enteredCategory,
-  };
+    const productData = {
+      URL: enteredUrl,
+      RATING: enteredRating,
+      DESCRIPTION: enteredDescription,
+      SKU: enteredSku,
+      QUANTITY: enteredQuantity,
+      PRICE: enteredPrice,
+      CATEGORY: enteredCategory,
+    };
 
   fetch(
   "https://performance-racing-composites-default-rtdb.firebaseio.com/productdata.json",
@@ -43,6 +60,7 @@ function handleSubmit(event) {
     body: JSON.stringify(productData),
     headers: {
       "Content-Type": "application/json",
+      "X-User-Id": `${authToken}`,
     },
   }).then(()=>{
     navigate('/home',{replace:true});
