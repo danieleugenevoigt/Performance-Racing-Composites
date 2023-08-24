@@ -17,10 +17,11 @@
     color: antiquewhite;
     display: inline-block;
     margin: 5px; 
-    position: relative;
-    right: 20.5rem;
-    height: 10rem;
-    width: 25rem;
+    position: fixed;
+    left: 41%;
+    right: 41%;
+    height: 12%;
+    width: 18%;
     z-index: 2;
 }
 
@@ -28,6 +29,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
+   
 }
 
 .close {
