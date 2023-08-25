@@ -9,6 +9,7 @@ const Header = () => {
   
   const toggleSelector = () => {
     setIsElementHidden(!isElementHidden);
+    console.log("clicked");
   }
 
   return (
@@ -67,7 +68,7 @@ const Header = () => {
         </ul>
       </nav>
       {isElementHidden &&
-      <VehicleSelector></VehicleSelector>
+      <VehicleSelector toggle={toggleSelector}></VehicleSelector>
       }
     </div>
   )
