@@ -18,10 +18,10 @@
     display: inline-block;
     margin: 5px; 
     position: fixed;
-    left: 41%;
-    right: 41%;
+    left: 37%;
+    right: 37%;
     height: 12%;
-    width: 18%;
+    width: 26%;
     z-index: 2;
 }
 
