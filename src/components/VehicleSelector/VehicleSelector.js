@@ -24,14 +24,13 @@ const VehicleSelector = ({ toggle } ) => {
  
   return (
     <div className={classes.container}>
-      <div className={classes.content}>
         <h2 className={classes.search}>Vehicle Search</h2>
         <div className={classes.close}>
           <button className={classes.headerBtn} onClick={toggle}>
             <span className="material-symbols-outlined">close</span>
           </button>
         </div>
-        <form className={classes.vehicleSelectorForm}>
+        <form id="vehicleSelectorForm">
         <label className={classes.vehicleSelectorLabel} htmlFor='vehicleSelector'>Make</label>
         <select name='vehicleSelector' ref={selectedRef}>
         <option value='Acura'>Acura</option>
@@ -84,7 +83,6 @@ const VehicleSelector = ({ toggle } ) => {
         <option value='Volvo'>Volvo</option>
         </select>
       </form>
-      </div>
     </div>
   )
 }
