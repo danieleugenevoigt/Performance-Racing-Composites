@@ -4,15 +4,28 @@
     margin: 0px;
 }
 
-form {
-    background-color: red;
+.container form {
+    align-self: center;
+    background-color: #363535;;
     border: none;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 0px;
+    grid-column: 1;
+    grid-row: 2;
+    height: 2.5rem;
+    margin-bottom: 1rem;
+    padding: 2px;
 }
 .container h2 {
-    grid-column: 1;
+    color: white;
+    font-weight: 600;
+    grid-column: 1/3;
     grid-row: 1;
-    margin: 1rem;
+    margin: 0rem;
     text-align: left;
+    text-shadow:0px 0px 30px black;  
 }
 
 .container {
@@ -25,28 +38,27 @@ form {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     margin: 5px; 
+    padding: 1rem;
     position: fixed;
     left: 36%;
     right: 36%;
-    height: 20%;
+    height: 12%;
     width: 28%;
     z-index: 2;
 }
 
-.content {
-    margin: none;
-   
-}
 
 .close {
     align-self: right;
     grid-column: 3;
     grid-row: 1;
-    margin-top: 1.5rem;
+    margin-left: 5rem;
+    margin-top: .5rem;
 }
 
 .headerBtn {
     display: contents;
+    color: orange;
 } 
 
 .material-symbols-outlined {
@@ -61,29 +73,25 @@ option {
     font-weight: 800;
 }
 
-.content form #vehicleSelectorForm {
-  border-radius: 5px;;
-  box-shadow: 0 0 20px black;
-  background-color:  rgb(54, 53, 53);
-  font-weight: 400;
-  grid-column: 1;
-  grid-row: 3;
-  height: 2.5rem;
-  margin: 2px;
-  padding: 1px;
-  width: 4rem;
-  
-} 
-
-label .vehicleSelectorLabel {
-    background-color:  rgb(54, 53, 53);
-    font-size: .8rem;
-    padding: 1px;
+.container label {
+    background-color: orange;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 800;
+    padding: 0px 0px 0px 5px;
+    text-shadow:0px 0px 30px black;  
 }
 
- input .vehicleSelectorInput {
+ .container select {
+    border: none;
     color: black;
-    background: orange;
-    border-radius: 5px;
+    background: white;
+    font-size: 1rem;
+    margin: 0px;
+}
+
+#make {
+    border: 5px solid red !important;
 }
 
