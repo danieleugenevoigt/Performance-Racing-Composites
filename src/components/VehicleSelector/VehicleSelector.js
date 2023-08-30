@@ -30,7 +30,8 @@ const VehicleSelector = ({ toggle } ) => {
             <span className="material-symbols-outlined">close</span>
           </button>
         </div>
-        <form id='make'>
+       
+        <form id="make">
         <label className={classes.vehicleSelectorLabel} htmlFor='vehicleSelector'>Make</label>
         <select name='vehicleSelector' ref={selectedRef}>
         <option value='Acura'>Acura</option>
@@ -83,6 +84,7 @@ const VehicleSelector = ({ toggle } ) => {
         <option value='Volvo'>Volvo</option>
         </select>
       </form>
+      
     </div>
   )
 }

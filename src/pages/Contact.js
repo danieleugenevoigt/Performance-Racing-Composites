@@ -1,7 +1,7 @@
 import React from 'react'
 import ContactForm from '../components/ContactForm';
 import classes from './Contact.module.css';
-import ProductForm from '../components/ProductForm';
+import ProductForm from '../components/ProductForm/ProductForm';
 import { useState } from 'react';
 
 const Contact = () => {

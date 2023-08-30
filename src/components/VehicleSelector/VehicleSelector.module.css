@@ -6,7 +6,7 @@
 
 .container form {
     align-self: center;
-    background-color: #363535;;
+    background-color: #363535;
     border: none;
     display: flex;
     flex-direction: column;
@@ -14,7 +14,7 @@
     gap: 0px;
     grid-column: 1;
     grid-row: 2;
-    height: 2.5rem;
+    height: 2.5rem !important;
     margin-bottom: 1rem;
     padding: 2px;
 }
@@ -83,15 +83,11 @@ option {
     text-shadow:0px 0px 30px black;  
 }
 
- .container select {
+.container select {
     border: none;
     color: black;
     background: white;
     font-size: 1rem;
     margin: 0px;
-}
-
-#make {
-    border: 5px solid red !important;
 }
 

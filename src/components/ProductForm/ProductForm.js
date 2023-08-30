@@ -1,7 +1,7 @@
 import classes from './ProductForm.module.css';
 import { useEffect, useState, useRef } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
-import {auth} from '../components/firebaseConfig';
+import {auth} from '../firebaseConfig';
 
 
 const ProductForm = (props) => {
