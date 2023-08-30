@@ -5,7 +5,7 @@
 }
 
 
-form {
+form #contactForm{
     display: flexbox;
     flex-direction: column;
     justify-content: space-around;

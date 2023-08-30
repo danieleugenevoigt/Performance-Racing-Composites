@@ -76,7 +76,7 @@ const ProductForm = (props) => {
 
   return (
     <div>
-      <form className={props.isShow2 ? classes.hide : ""} onSubmit={handleSubmit}>
+      <form id="productForm" className={props.isShow2 ? classes.hide : ""} onSubmit={handleSubmit}>
         <div>
           <label htmlFor='image url'>Image Url </label>
           <input

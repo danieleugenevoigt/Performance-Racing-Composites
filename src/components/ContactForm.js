@@ -49,7 +49,7 @@ function handleSubmit(event) {
 
   return (
     <div>
-      <form className={props.isShow ? classes.hide : ""} onSubmit={handleSubmit}>
+      <form id="contactForm" className={props.isShow ? classes.hide : ""} onSubmit={handleSubmit}>
         <div>
           <label htmlFor='fname'>First Name </label>
           <input
