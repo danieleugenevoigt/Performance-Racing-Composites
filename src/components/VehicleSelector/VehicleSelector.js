@@ -176,6 +176,7 @@ const VehicleSelector = ({ toggle } ) => {
           <option value='2025'>2025</option>
         </select>
       </form>
+      <button className={classes.partsButton}>Find My Parts!</button>
     </div>
   )
 }
