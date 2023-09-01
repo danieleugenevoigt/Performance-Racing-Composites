@@ -35,13 +35,15 @@ option {
 .selectorLabel {
     background: none;
     font-size: 1.2rem;
+    margin-left: 30px;
     margin-right: 30px;
 }
 
 .selectorInput {
     color: black;
-    background: orange;
+    background: white;
     padding: 2px 15px 2px 15px;
-    margin-left: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
     border-radius: 5px;
 }

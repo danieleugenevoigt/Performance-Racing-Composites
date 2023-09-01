@@ -56,7 +56,7 @@ const Products = () => {
     <section className={classes.productLayout}>
       <form className={classes.selectorForm}>
         <label className={classes.selectorLabel} htmlFor='productSelector'>Filter Products By Type</label>
-        <select name='productSelector' id='productSelector' ref={selectedRef} onChange={handleSelection}>
+        <select name='productSelector' className={classes.selectorInput} ref={selectedRef} onChange={handleSelection}>
           <option value='All'>All</option>
           <option value='Body'>Body</option>
           <option value='Engine'>Engine</option>
