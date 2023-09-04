@@ -13,7 +13,7 @@ form {
     height: 3.25rem;
     margin-left: auto;
     margin-right: auto;
-    width: 95%
+    width: 98%
 }
 
 
@@ -29,10 +29,10 @@ form {
     margin: 5px; 
     padding: 1rem;
     position: fixed;
-    left: 36%;
-    right: 36%;
+    left: 32%;
+    right: 32%;
     height: 25%;
-    width: 28%;
+    width: 36%;
 }
 
 .container h2 {
@@ -104,7 +104,7 @@ option {
     border: none;
     border-radius: 0px 0px 3px 3px;
     color: black;
-    font-size: 1rem;
+    font-size: .8rem;
     margin: 0px;
     height: 50%;
     width: 100%;

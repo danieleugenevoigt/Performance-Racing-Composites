@@ -70,7 +70,7 @@ const VehicleSelector = ({ toggle } ) => {
           <option value='Jeep'>Jeep</option>
           <option value='Kia'>Kia</option>
           <option value='Lamborghini'>Lamborghini</option>
-          <option value='Land Rover'>Land Rover</option>
+          <option value='LandRover'>Land Rover</option>
           <option value='Lexus'>Lexus</option>
           <option value='Lincoln'>Lincoln</option>
           <option value='Maserati'>Maserati</option>
