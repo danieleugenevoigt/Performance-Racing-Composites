@@ -1,10 +1,12 @@
-import { React, useRef } from 'react';
+import { React, useRef, useState } from 'react';
 import classes from '../VehicleSelector/VehicleSelector.module.css';
+import makeToModelMapping from './ModelLists/MakeToModelMapping';
 
 const VehicleSelector = ({ toggle } ) => {
 
   const selectedRef = useRef();
-
+  const [model, setModel] = useState('');
+  const [make, setMake] = useState('')
   //--------------------------------------------------------------------------------------------------------------
   // function handleSelection(event) {
   //   event.preventDefault();
@@ -21,7 +23,15 @@ const VehicleSelector = ({ toggle } ) => {
   //     );
   //   }
   //} //end function -------------------------------------------------------------------------------------------------
- 
+  
+  const handleMake = (e) => {
+    const selectedMake = e.target.value;
+    setMake(selectedMake);
+    // Reset the selected model when the make changes
+    console.log(selectedMake);
+    setModel('');
+  }
+
   return (
     <div className={classes.container}>
         <h2 className={classes.search}>Vehicle Search</h2>
@@ -33,10 +43,11 @@ const VehicleSelector = ({ toggle } ) => {
        
         <form className={classes.selectorMake}>
         <label className={classes.vehicleSelectorLabel} htmlFor='vehicleMake'>Make</label>
-          <select name='vehicleMake' ref={selectedRef}>
+          <select name='vehicleMake' onChange={handleMake}>
+          <option value=''>-</option>
           <option value='Acura'>Acura</option>
-          <option value='Alfa Romeo'>Alfa Romeo</option>
-          <option value='Aston Martin'>Aston Martin</option>
+          <option value='AlfaRomeo'>Alfa Romeo</option>
+          <option value='AstonMartin'>Aston Martin</option>
           <option value='Audi'>Audi</option>
           <option value='Bentley'>Bentley</option>
           <option value='BMW'>BMW</option>
@@ -86,23 +97,14 @@ const VehicleSelector = ({ toggle } ) => {
       </form>
       <form className={classes.selectorModel}>
         <label className={classes.vehicleSelectorLabel} htmlFor='vehicleModel'>Make</label>
-        <select name='vehicleModel' ref={selectedRef}>
-          <option value='CL'>CL</option>
-          <option value='ILX'>ILX</option>
-          <option value='Integra'>Integra</option>
-          <option value='Legend'>Legend</option>
-          <option value='MDX'>MDX</option>
-          <option value='NSX'>NSX</option>
-          <option value='RDX'>RDX</option>
-          <option value='RL'>RL</option>
-          <option value='RLX'>RLX</option>
-          <option value='RSX'>RSX</option>
-          <option value='SLX'>SLX</option>
-          <option value='TL'>TL</option>
-          <option value='TLX'>TLX</option>
-          <option value='TSX'>TSX</option>
-          <option value='Vigor'>Vigor</option>
-          <option value='ZDX'>ZDX</option>
+        <select onChange={(event) => setModel(event.target.value)}>
+        <option value=""></option>
+        {makeToModelMapping[make] &&
+          makeToModelMapping[make].map((modelOption) => (
+            <option key={modelOption} value={modelOption}>
+              {modelOption}
+            </option>
+          ))}
         </select>
       </form>
       <form className={classes.selectorYear}>
