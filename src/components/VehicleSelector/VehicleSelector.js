@@ -76,7 +76,7 @@ const VehicleSelector = ({ toggle } ) => {
           <option value='Maserati'>Maserati</option>
           <option value='Mazda'>Mazda</option>
           <option value='McLaren'>McLaren</option>
-          <option value='Mercedes-Benz'>Mercedes-Benz</option>
+          <option value='MercedesBenz'>Mercedes-Benz</option>
           <option value='Mini'>Mini</option>
           <option value='Mitsubishi'>Mitsubishi</option>
           <option value='Nissan'>Nissan</option>
@@ -85,7 +85,7 @@ const VehicleSelector = ({ toggle } ) => {
           <option value='Porsche'>Porsche</option>
           <option value='RAM'>RAM</option>
           <option value='Renault'>Renault</option>
-          <option value='Rolls-Royce'>Rolls-Royce</option>
+          <option value='RollsRoyce'>Rolls-Royce</option>
           <option value='Saab'>Saab</option>
           <option value='Subaru'>Subaru</option>
           <option value='Suzuki'>Suzuki</option>
